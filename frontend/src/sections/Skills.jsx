@@ -48,17 +48,16 @@ export default function Skills() {
 
   const soft = [
     "Leadership",
-    "Teamwork",
+    "Collaboration",
     "Organized",
     "Detail-oriented",
     "Adaptable",
-    "Curious",
     "Proactive",
     "Enthusiastic",
     "Teachable",
     "Communication",
     "Creative",
-    "Problem-Solving",
+    "Problem-solving",
   ];
 
   const certs = [
@@ -75,13 +74,13 @@ export default function Skills() {
           gap: 12,
         }}
       >
-        <div style={{ gridColumn: "span 3" }}>
+        <div style={{ gridColumn: "span 1" }}>
           <Card title="Hard">
             <ul
               style={{
                 margin: 0,
                 paddingLeft: 18,
-                columns: 3,
+                columns: 2,
                 columnGap: 24,
               }}
             >
@@ -94,7 +93,7 @@ export default function Skills() {
           </Card>
         </div>
 
-        <div style={{ gridColumn: "span 2" }}>
+        <div style={{ gridColumn: "span 1" }}>
           <Card title="Soft">
             <ul
               style={{
@@ -113,15 +112,18 @@ export default function Skills() {
           </Card>
         </div>
 
-        <Card title="Certifications">
-          <ul style={{ margin: 0, paddingLeft: 18 }}>
-            {certs.map((c) => (
-              <li key={c} style={{ marginBottom: 4 }}>
-                {c}
-              </li>
-            ))}
-          </ul>
-        </Card>
+        <div style={{ gridColumn: "span 1" }}>
+          <Card title="Certifications">
+            <ul style={{ margin: 0, paddingLeft: 18 }}>
+              {certs.map((c) => (
+                <li key={c} style={{ marginBottom: 4 }}>
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </Card>
+        </div>
+
       </div>
     </Section>
   );
