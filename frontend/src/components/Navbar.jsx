@@ -27,8 +27,9 @@ export default function Navbar() {
         </a>
 
         <a
-          href="/resume.pdf"
-          download
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             padding: "6px 14px",
             borderRadius: 999,
