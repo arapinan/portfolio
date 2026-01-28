@@ -1,61 +1,31 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Education from "./pages/Education";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import BackToTop from "./components/Top";
 
-// define routes
-
-function Layout({ children }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-    </>
-  );
-}
+import Home from "./sections/Home";
+import Projects from "./sections/Projects";
+import Skills from "./sections/Skills";
+import About from "./sections/About";
 
 export default function App() {
   return (
-    <Routes>
-      {/* home page doesn't have a navbar */}
-      <Route path="/" element={<Home />} />
-
-      {/* other pages share a navbar */}
-      <Route
-        path="/education"
-        element={
-          <Layout>
-            <Education />
-          </Layout>
-        }
-      />
-      <Route
-        path="/projects"
-        element={
-          <Layout>
-            <Projects />
-          </Layout>
-        }
-      />
-      <Route
-        path="/skills"
-        element={
-          <Layout>
-            <Skills />
-          </Layout>
-        }
-      />
-      <Route
-        path="/about"
-        element={
-          <Layout>
-            <About />
-          </Layout>
-        }
-      />
-    </Routes>
+    <>
+      <Navbar />
+      <Home />
+      <Projects />
+      <Skills />
+      <About />
+      <BackToTop />
+      <footer
+        style={{
+          marginTop: "clamp(40px, 8vw, 80px)",
+          padding: "24px 0",
+          textAlign: "center",
+          fontSize: 16,
+          opacity: 0.6,
+        }}
+      >
+        © {new Date().getFullYear()} Athena Rapinan
+      </footer>
+    </>
   );
 }
