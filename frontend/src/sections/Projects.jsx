@@ -154,6 +154,94 @@ function Card({ img, alt, title, desc, tech = [], live, github, paper, workshops
   );
 }
 
+function OtherNotableProjects() {
+  const items = [
+    {
+      title: "WordleBot",
+      desc:
+        "Developed an AI Wordle solver by modeling the game as a constraint satisfaction problem and selecting guesses using a Shannon entropy–based information gain heuristic. Achieved a 100% success rate over 100 games with an average of 4.3 guesses per puzzle and sub-10-second runtime by simulating all possible feedback patterns and dynamically pruning the candidate search space.",
+        tech: [
+        "Python",
+        "Constraint Satisfaction",
+        "Information Theory",
+        "Shannon Entropy",
+        "Search Algorithms",
+        "Probabilistic Reasoning",
+      ]
+    },
+    {
+      title: "ZotStreaming",
+      desc:
+        "Developed a command-line database management system for a streaming platform using Python and MySQL. Built a structured CLI that parses user commands into parameterized SQL queries to support data ingestion, inserts, updates, deletions, and analytical queries across multiple normalized tables. Ensured robustness by enforcing relational constraints, and handling duplicate keys & NULL values.",
+      tech: [
+        "Python",
+        "MySQL",
+        "SQL",
+        "Relational Schema Design",
+        "Query Parsing",
+        "Data Integrity Constraints",
+      ]
+    },
+  ];
+
+  return (
+    <div style={{ marginTop: 28 }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          justifyContent: "space-between",
+          gap: 12,
+          marginBottom: 12,
+        }}
+      >
+        <h3 style={{ margin: 0, fontSize: 18 }}>
+          Other Notable Projects
+        </h3>
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gap: 12,
+        }}
+      >
+        {items.map((p) => (
+          <article
+            key={p.title}
+            style={{
+              padding: "clamp(14px, 2.2vw, 18px)",
+              background: "#fff",
+              boxShadow: "0 8px 24px rgba(0, 0, 0, 0.06)",
+              border: "1px solid rgba(0,0,0,0.06)",
+            }}
+          >
+            <h4 style={{ margin: 0, fontSize: 16 }}>{p.title}</h4>
+
+            <p style={{ margin: "8px 0 0", fontSize: 14, lineHeight: 1.65 }}>
+              {p.desc}
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 8,
+                marginTop: 12,
+              }}
+            >
+              {p.tech.map((t) => (
+                <Chip key={t}>{t}</Chip>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Projects() {
   const projects = [
     {
@@ -205,6 +293,8 @@ export default function Projects() {
           <Card key={p.title || index} {...p} />
         ))}
       </div>
+
+      <OtherNotableProjects />
     </Section>
   );
 }

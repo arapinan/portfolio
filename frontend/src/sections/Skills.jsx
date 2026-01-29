@@ -37,13 +37,30 @@ function Card({ title, children }) {
 
 export default function Skills() {
   const hard = [
-    "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn",
-    "Scikit-Learn", "PyTorch", "SQL", "R",
-    "ML", "GenAI", "VS Code", "Jupyter",
-    "Power BI", "Excel",
-    "APIs", "Web Dev",
-    "Git", "Database Management",
-    "Data Mining", "Data Analytics",
+    "Python",
+    "Scikit-Learn",
+    "PyTorch",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "API",
+    "SQL",
+    "R",
+    "JavaScript",
+    "GCP",
+    "Jupyter",
+    "Colab",
+    "Power BI",
+    "Excel",
+    "Git",
+    "Web Development",
+    "Database Management",
+    "Data Analysis",
+    "Data Mining",
+    "Machine Learning",
+    "Deep Learning",
+    "Generative AI",
   ];
 
   const soft = [
@@ -56,7 +73,7 @@ export default function Skills() {
     "Enthusiastic",
     "Teachable",
     "Communication",
-    "Creative",
+    "Creativity",
     "Problem-solving",
   ];
 
