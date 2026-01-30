@@ -53,8 +53,8 @@ function Card({ img, alt, children }) {
 export default function About() {
   const hobbies = [
     "Fitness: Hiking, Running, Cycling, Team Sports",
-    "Music: Ukulele, Guitar",
-    "Other: Travel, Photography, Languages, Drawing, NHL",
+    "Creative: Ukulele, Guitar, Photography, Drawing",
+    "Interests: Travel, Languages, NHL",
   ];
 
   const bucketlist = [
@@ -78,12 +78,16 @@ export default function About() {
             <strong>Columbia University</strong>
             <br />
             M.S. Data Science | Sep 2025 – Dec 2026
+            <br />
+            Dean’s MS Academic Excellence Fellow
           </Card>
 
           <Card img={uciImg} alt="UC Irvine">
             <strong>University of California, Irvine</strong>
             <br />
             B.S. Computer Science | Sep 2022 – Jun 2025
+            <br />
+            Chancellor’s Award of Distinction, Cum Laude
           </Card>
 
           <Card img={hockeyImg} alt="hockey">

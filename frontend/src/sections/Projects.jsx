@@ -272,7 +272,7 @@ export default function Projects() {
     },
     {
       title: "Yelp Reviews EDA & Prediction",
-      desc: "Performed exploratory data analysis on Yelp reviews to uncover trends in user sentiment and ratings. Trained machine learning models (Random Forest, SVM, Regression) to predict star ratings using feature engineering (text vectorization, sentiment analysis).",
+      desc: "Applied text vectorization and sentiment feature engineering (SBERT embeddings, TF-IDF) on 10k reviews to train and evaluate Random Forest, SVM, and Logistic Regression models for rating prediction, comparing model performance and identifying trends in user sentiment and ratings.",
       tech: ["Python", "Pandas", "Scikit-learn", "NLP", "Data Visualization", "Optimization"],
       paper: "https://docs.google.com/document/d/1A3NuKi5XyCrRCqygL9cjwOG855uPbHJgqd52kk0yZXE/edit?usp=sharing",
       img: yelpImg,

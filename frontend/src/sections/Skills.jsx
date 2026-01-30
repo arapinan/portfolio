@@ -56,6 +56,7 @@ export default function Skills() {
     "Git",
     "Web Development",
     "Database Management",
+    "Information Retrieval",
     "Data Analysis",
     "Data Mining",
     "Machine Learning",
